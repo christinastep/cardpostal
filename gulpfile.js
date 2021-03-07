@@ -383,6 +383,17 @@ gulp.task('watch', gulp.series(
   'watchFiles'
 ));
 
+gulp.task('super-build', gulp.series(
+  'html',
+  'style',
+  'scripts',
+  'addAssets',
+  'optimizeCss',
+  'productionJs',
+  'compressImages'
+));
+
+
 
 
 
