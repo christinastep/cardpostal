@@ -1,0 +1,15 @@
+body{
+  width:100vw;
+  overflow-x: hidden;
+}
+:root{
+  --mainColor:#1921E0;
+}
+
+@import "reset";
+@import "mixin";
+@import "animation";
+@import "font";
+@import "layout";
+@import "intro";
+@import "map";

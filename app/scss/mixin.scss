@@ -1,0 +1,11 @@
+@mixin media($size) {
+  @if $size == max-xs {
+    @media (max-width: 599px) { @content; }
+  } 
+  @else if $size == min-sm {
+    @media (min-width: 900px) { @content; }
+  } 
+  @else if $size == min-lg {
+    @media (min-width: 1200px) { @content; }
+  } 
+}

@@ -1,0 +1,49 @@
+@import "mixin";
+
+$textStyles: "h1","h2","p";
+
+
+
+@include media(max-xs){
+  @each $textStyle in $textStyles {
+    #{$textStyle} {
+      font-size: var(--#{$textStyle}XsFontSize);
+      font-family: var(--#{$textStyle}XsFontFamily);
+      font-weight: var(--#{$textStyle}XsFontWeight);
+      line-height: var(--#{$textStyle}XsLineHeight);
+    }
+  }
+}
+
+@include media(min-sm){
+  @each $textStyle in $textStyles {
+    #{$textStyle} {
+      font-size: 150px;
+      font-family: var(--#{$textStyle}LgFontFamily);
+      font-weight: var(--#{$textStyle}LgFontWeight);
+      line-height: var(--#{$textStyle}LgLineHeight);
+    }
+  }
+}
+
+h1,h2,h3{
+  font-family: "Rakkas";
+}
+
+h1{
+  font-size: 148px;
+  line-height: 220px;
+  color: var(--mainColor);
+}
+
+h2{
+  font-size: 68px;
+  line-height: 64px;
+}
+
+h3{
+  
+  font-size: 40px;
+  color:#ffff;
+}
+
