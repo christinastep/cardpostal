@@ -1,6 +1,14 @@
 body{
   width:100vw;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section{
+  width:100%;
+  max-width: 1200px;
 }
 :root{
   --mainColor:#1921E0;
@@ -13,3 +21,4 @@ body{
 @import "layout";
 @import "intro";
 @import "map";
+@import "steps";

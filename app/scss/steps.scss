@@ -1,0 +1,44 @@
+.step{
+  width:45%;
+  background-color: lightblue;
+  .step__number{
+    width:10vw;
+    background-color: yellow;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    
+    p{
+      font-size: 15vw;
+      position: absolute;
+      font-weight: bold;
+      bottom: 0;
+      right:50%
+    }
+  }
+  .step__headline{
+    position: relative;
+    z-index: 4;
+    position: relative;
+    top:-5vw;
+    left:5vw;
+
+  }
+  .step__text{
+    position: relative;
+    top:-5vw;
+    left:5vw;
+    width:calc(100% - 5vw)
+  }
+  &:nth-of-type(2){
+    justify-self: end;
+  }
+}
+
+.section--steps{
+  width: 100%;
+  max-width: 1200px;
+  background-color: pink;
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
