@@ -1,12 +1,5 @@
 @import "mixin";
 
-:root{
-  --scrollY:1;
-}
-
-*{
-  box-sizing: border-box;
-}
 
 
 .intro{
@@ -29,6 +22,33 @@
     position: absolute;
     z-index: 1;
   }
+}
+
+.lineBox{
+  position: absolute;
+  width:100vw;
+  height:100vh;
+  display: flex;
+  justify-content: space-around;
+  .line{
+    width:2px;
+    height:0;
+    background-color: var(--mainColor);
+    @include media(max-xs){
+      &:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(3),&:nth-of-type(2){
+        display: none;
+      }
+    }
+    
+    @for $i from 1 through 7 {
+      $delay:calc((0.08 * #{$i}s));
+      &:nth-of-type(#{$i}){
+        animation: scale100vh 0.5s $delay forwards;
+      }
+    }
+
+  }
+  
 }
 
 .waveBox{
@@ -61,34 +81,8 @@
   }
 }
 
-.lineBox{
-  position: fixed;
-  width:100vw;
-  height:100vh;
-  display: flex;
-  justify-content: space-around;
-  .line{
-    width:2px;
-    height:0;
-    background-color: var(--mainColor);
-    @include media(max-xs){
-      &:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(3),&:nth-of-type(2){
-        display: none;
-      }
-    }
-    
-    @for $i from 1 through 7 {
-      $delay:calc((0.08 * #{$i}s));
-      &:nth-of-type(#{$i}){
-        animation: scale100vh 0.5s $delay forwards;
-      }
-    }
 
-  }
-  
-}
-
-h1{
+.titreBox{
   width:90%;
   max-width: 1200px;
   position: absolute;
@@ -103,47 +97,31 @@ h1{
     position: absolute;
     display: block;
     animation: maskTopToBottom 1.5s forwards;
-    &:nth-child(1){
-      
-      // transform: 
-      // translateX(calc(var(--scrollY) * 1.4px))
-      // translateY(calc(var(--scrollY) * 0.55px));
-    }
+    font-size: clamp(75px,13vw,148px);
+    line-height: clamp(75px,14vw,148px);
     &:nth-child(2){
-      top:12vh;
+      top:14vh;
       left:20vw;
       @include media(max-xs){
         top:9vh;
       }
-      // transform: 
-      // translateX(calc(var(--scrollY) * 1px))
-      // translateY(calc(var(--scrollY) * 0.55px));
-      //transform: opacity(0);
     }
     &:nth-child(3){
       right: 0;
       bottom:0;
-      font-size: 150px;
-      line-height: 165px;
+      //font-size: 150px;
+      //line-height: 165px;
       @include media(max-xs){
         font-size: 75px;
       }
-      // transform: 
-      // translateX(calc(var(--scrollY) * 1px))
-      // translateY(calc(var(--scrollY) * 0.55px));
     }
   }
 }
 
-.stopFillMode{
-  //transition: transform 0.5s;
-}
 
 .gradBox{
   position: absolute;
   opacity: 0;
-  //transform: translateY(-100vh);
-  
   p{
     font-size: 2vw;
     font-family: "Rakkas";
@@ -159,13 +137,11 @@ h1{
     top:8vh;
     text-align: right;
     animation: moveInTop 1s 0s forwards;
-    //transform: translateY(calc(var(--scrollY) * 0.5px));
   }
   &--2{
     left:8vw;
     top:50vh;
     animation: moveInTop 1s 0.4s forwards;
-    //transform: translateY(calc(var(--scrollY) * 0.8px));
     @include media(max-xs){
       display: none;
     }
@@ -174,38 +150,13 @@ h1{
 }
 
 
-.trenner{
-  background-color: yellow;
- 
-  width:100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8vw;
-  position: relative;
-  z-index: 2;
-  //transform: translateY(calc(var(--scrollY) * 0.1px));
-  h3{
-    margin-bottom: 20px;
-  }
-  p{
-    font-size: clamp(1rem, 3.9vw, 3rem); 
-    line-height: clamp(1.3rem, 4.5vw, 3.5rem); 
-    color:#fff;
-    text-align: center;
-    font-family: sans-serif;
-    font-weight: 100;
-    color: var(--mainColor);
-    max-width: 1100px;
-  }
-}
+
 
 .carteBox{
   position: relative;
   display: flex;
   justify-content: center;
   transform: translateY(-100vh);
-  //margin-top: -15%;
   animation:moveInTop 0.6s 0.2s forwards ;
   
  
@@ -238,42 +189,6 @@ h1{
   }
 }
 
-
-
-.input--search{
-  border: solid 3px #fff;
-  width:40vw;
-  height:50px;
-  background-color: transparent;
-  border-radius: 20vw;
-  color:#fff;
-  text-align: center;
-
-  @include media(max-xs){
-    width: 80vw;
-    height: 40px;
-  }
-  &:focus{
-    //border: none;
-    outline: none;
-  }
-}
-
-.inputBox{
-  position: relative;
-  &::after{
-    content: "";
-    display: block;
-    position: absolute;
-    left: 18px;
-    top: 14px;
-    width: 30px;
-    height: 30px;
-    background-image: url(../images/icons/lupe.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
 
 .stemp{
   position: absolute;
