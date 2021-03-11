@@ -4,9 +4,11 @@ h1,h2,h3{
   font-family: "Rakkas";
 }
 
-h1{
+h1,
+.headline--big{
   color: var(--mainColor);
-  color:red;
+  font-size: clamp(75px,13vw,148px);
+  line-height: clamp(75px,14vw,148px);
 }
 
 h2{

@@ -1,15 +1,30 @@
 @import "mixin";
 
 .section__map{
-  height: 100vh;
   position: relative;
-  // background-color: yellow;
-  .map{
-    position: absolute;
-    right:0vw;
-    top: 2vh;
-    width:50vw;
+  //display: flex;
+  .map__titelBox{
+    width: 50%;
+    position: sticky;
+    top:0;
+    display: block;
   }
+  .map__cardBox{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-rows: 1fr 1fr;
+    transform: translate(100%);
+  }
+  // background-color: yellow;
+  // .icon--bretagne{
+  //   position: absolute;
+  //   right:0vw;
+  //   top: 2vh;
+  //   width:50vw;
+  // }
 }
 
 h2{
@@ -17,40 +32,11 @@ h2{
   width:35vw;
 }
 
-.cards{
-  position: absolute;
-  bottom:10vh;
-  z-index: 2;
-  width: 75vw;
-  margin-left: 4vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  h3{
-    position: absolute;
-    bottom:0;
-    font-size: 55px;
-    line-height: 60px;
-    display: inline-block;
-    z-index: 2;
-    padding: 0;
-    margin: 0;
-    clip-path: inset(0 100% 0 0 );
-  
-    transition: all 0.3s ease;
-    &.open{
-      clip-path: inset(0 0 0 0 );
-    }
-    span{
-      background-color: var(--mainColor);
-      padding: 0 10px 0 10px;
-      margin: 0;
-    }
-  }
- 
+
   .card{
-    width:23%;
     position: relative;
+    align-self: center;
+    width: 80%;
     &:hover{
       &::after{
         transform: rotate(-10deg) scale(1.1);
@@ -59,6 +45,28 @@ h2{
         clip-path: inset(0 0 0 0 );
       }
     }
+    h3{
+      position: absolute;
+      bottom:0;
+      font-size: 55px;
+      line-height: 60px;
+      display: inline-block;
+      z-index: 2;
+      padding: 0;
+      margin: 0;
+      clip-path: inset(0 100% 0 0 );
+    
+      transition: all 0.3s ease;
+      &.open{
+        clip-path: inset(0 0 0 0 );
+      }
+      span{
+        background-color: var(--mainColor);
+        padding: 0 10px 0 10px;
+        margin: 0;
+      }
+    }
+
     img{
       width: 100%;
       position: relative;
@@ -79,7 +87,6 @@ h2{
       transform: rotate(0deg) scale(1);
     }
   }
-}
 
 .navSlider{
   position: absolute;

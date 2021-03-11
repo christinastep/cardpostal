@@ -97,8 +97,6 @@
     position: absolute;
     display: block;
     animation: maskTopToBottom 1.5s forwards;
-    font-size: clamp(75px,13vw,148px);
-    line-height: clamp(75px,14vw,148px);
     &:nth-child(2){
       top:14vh;
       left:20vw;

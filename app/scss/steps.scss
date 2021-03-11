@@ -111,14 +111,23 @@
 
 .section--steps{
   width: 100%;
-  max-width: 1200px;
-  display: grid;
-  grid-template-rows: auto auto auto;
-  margin-top: 10vh;
-  padding-left: 6vw;
-  padding-right: 2vw;
+  
   background-color: #fff;
+  position: relative;
+  .lineBox{
+    height:100%;
+    opacity: 0.1;
+  }
   @include media(max-xs){
     padding: 0;
   }
+}
+
+.stepsWrapper{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  max-width: 1200px;
+  margin-top: 10vh;
+  padding-left: 6vw;
+  padding-right: 2vw;
 }
