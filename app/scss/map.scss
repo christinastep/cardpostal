@@ -2,29 +2,67 @@
 
 .section__map{
   position: relative;
+  padding-bottom: 30vh;
   //display: flex;
+  @include media(max-xs){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+  }
+ 
+  
   .map__titelBox{
     width: 50%;
     position: sticky;
     top:0;
     display: block;
+    padding-top: 10vh;
+    @include media(max-xs){
+      position: relative;
+      width:100%;
+      padding: 0 20px;
+      padding-top: 20vw;
+      margin-bottom: 50px;
+    }
+    span{
+      position: relative;
+      z-index: 2;
+      display: block;
+      
+    }
+    &:before{
+      content: "";
+      background-color: yellow;
+      width:60vw;
+      height:60vw;
+      display: block;
+      position: absolute;
+      top:0;
+      right:0;
+      transform: translateX(100%) translateY(-30%);
+      border-radius: 50%;
+      @include media(max-xs){
+        transform: translateX(20%) translateY(-30%);
+      }
+  
+    }
   }
   .map__cardBox{
     width: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
     row-gap: 20px;
     grid-template-rows: 1fr 1fr;
-    transform: translate(100%);
+    @include media(min-sm){  
+     transform: translateX(100%) translateY(0vh);
+     column-gap: 20px;
+    }
+    @include media(max-xs){
+      width:90%;
+      row-gap: 50px;
+    }
   }
-  // background-color: yellow;
-  // .icon--bretagne{
-  //   position: absolute;
-  //   right:0vw;
-  //   top: 2vh;
-  //   width:50vw;
-  // }
 }
 
 h2{
@@ -36,7 +74,12 @@ h2{
   .card{
     position: relative;
     align-self: center;
+    justify-self: end;
     width: 80%;
+    background-color: yellow;
+    @include media(max-xs){
+      justify-self: center;
+    }
     &:hover{
       &::after{
         transform: rotate(-10deg) scale(1.1);
@@ -78,7 +121,7 @@ h2{
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: yellow;
+      background-color: var(--mainColor);
       //z-index: 10;
       z-index: 1;
       top:0;

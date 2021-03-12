@@ -1,3 +1,5 @@
+@import "mixin";
+
 body{
   width: 100vw;
   padding:0;
@@ -19,6 +21,21 @@ section{
   width:100%;
   max-width: 1200px;
 }
+
+.section{
+  width: 100%;
+  
+  background-color: #fff;
+  position: relative;
+  @include media(max-xs){
+    padding: 0;
+  }
+  .section__wrapper{
+    max-width: 1200px;
+    padding-right: 2vw;
+    padding-left: 2vw;
+  }
+}
 :root{
   --mainColor:#1921E0;
   --scrollY:1;
@@ -29,3 +46,10 @@ section{
   box-sizing: border-box;
 }
 
+.lineBox--transparent{
+  height:100% !important;
+  opacity: 0.1;
+  img{
+    height: 100%;
+  }
+}

@@ -109,25 +109,21 @@
   }
 }
 
-.section--steps{
-  width: 100%;
-  
-  background-color: #fff;
-  position: relative;
-  .lineBox{
-    height:100%;
-    opacity: 0.1;
-  }
-  @include media(max-xs){
-    padding: 0;
-  }
-}
+
 
 .stepsWrapper{
   display: grid;
   grid-template-rows: auto auto auto;
-  max-width: 1200px;
+  
   margin-top: 10vh;
   padding-left: 6vw;
   padding-right: 2vw;
+  margin-bottom: 10vh;
+  .headline--big{
+    width: 70%;
+    @include media(min-sm){
+      margin-left: 30%;
+      text-align: right;
+    }
+  }
 }
