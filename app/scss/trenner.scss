@@ -2,12 +2,15 @@
   width:100vw;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   padding: 8vw;
   position: relative;
   z-index: 2;
   //transform: translateY(calc(var(--scrollY) * 0.1px));
-
+  .button{
+    margin-top: 50px;
+  }
   h3{
     margin-bottom: 20px;
   }

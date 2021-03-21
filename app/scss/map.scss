@@ -2,13 +2,17 @@
 
 .section__map{
   position: relative;
-  padding-bottom: 30vh;
+  //padding-bottom: 30vh;
   //display: flex;
   @include media(max-xs){
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 80px;
+  }
+
+  .section__wrapper{
+    padding-bottom:30vh;
   }
  
   
@@ -152,12 +156,13 @@ h2{
   }
 }
 
-button{
+.button{
   display: block;
   border-radius: 30vw;
-  background-color: blue;
-  color: #fff;
-  font-size: 20px;
+  padding: 1vw 2vw;
+  background-color: transparent;
+  border: solid 1px black;
+  color:black;
 }
 
 .headnlinBox--map{
