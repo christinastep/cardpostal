@@ -26,6 +26,10 @@
     display:flex;
     flex-direction: column;
     height: auto;
+    padding: 0 5vw;
+    @include media(max-xs){
+      padding: 0;
+    }
   }
   .post__map{
     width: 100%;
@@ -62,7 +66,7 @@
       .card{
         max-height:80vh;
         max-width:57vh;
-        max-width: 100%;
+        //max-width: 100%;
         position: relative;
         top:0;
         left:0;
@@ -72,6 +76,7 @@
         z-index: 2;
         img{
           height: 100%;
+          max-width:57vh;
         }
       }
     }
@@ -122,18 +127,17 @@
 .post__main{
   background-color: #fff;
   margin-top: 50px;
+  padding: 0 5vw;
   @include media(max-xs){
     padding: 0 15px;
   }
 }
 
 .post__main{
-  max-width: 600px;
 }
 
 .post__content--main{
   width:100%;
-  max-width: 1200px;
  
   margin-top: 10vh;
 }
@@ -147,12 +151,14 @@
   column-count: 3;
   column-gap: 30px;
   column-rule: solid 1px black;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
+  padding: 0 10vw;
   @include media(max-xs){
     column-count: 1;
+    padding: 0;
   }
   .factBox{
-    max-width: 350px;
+    text-align: center;
     @include media(max-xs){
       max-width: none;
       text-align: center;
@@ -185,8 +191,10 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 100px;
+  padding: 0 10vw;
   @include media(max-xs){
     flex-direction: column;
+    padding: 0;
   }
   .testBox__headline{
     width:30%;
@@ -196,7 +204,6 @@
     }
   }
   .testBox__text{
-    max-width: 800px;
     width:65%;
     @include media(max-xs){
       max-width: none;

@@ -83,7 +83,6 @@
       @include media(min-sm){
         width:45vw;
         height:20vw;
-        max-width: 700px;
         top:60%;
         left:30%;
       }
@@ -99,7 +98,6 @@
       @include media(min-sm){
         width:30vw;
         height:20vw;
-        max-width: 450px;
         top:-40%;
         left:40%;
       }

@@ -21,19 +21,17 @@ html{
 
 section{
   width:100%;
-  max-width: 1200px;
 }
 
 .section{
   width: 100%;
-  
+  padding: 0 5vw;
   background-color: #fff;
   position: relative;
   @include media(max-xs){
     padding: 0;
   }
   .section__wrapper{
-    max-width: 1200px;
     padding-right: 2vw;
     padding-left: 2vw;
     position: relative;
@@ -84,7 +82,7 @@ section{
 
 .link--source,
 .link--line{
-  font-size: 16px;
+  //font-size: 16px;
   display: block;
   width: 200px;
   color: var(--mainColor);
