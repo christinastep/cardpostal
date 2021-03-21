@@ -127,6 +127,7 @@
     color:#CACCFF;
     @include media(max-xs){
       font-size: 4vw;
+      line-height: 4.5vw;
       color: var(--mainColor)
     }
   }
@@ -157,6 +158,9 @@
   justify-content: center;
   transform: translateY(-100vh);
   animation:moveInTop 0.6s 0.2s forwards ;
+  @include media(max-xs){
+    margin-top: -5vh;
+  }
   
  
   img{

@@ -2,17 +2,18 @@
 
 .section__map{
   position: relative;
-  //padding-bottom: 30vh;
-  //display: flex;
+
   @include media(max-xs){
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 80px;
   }
 
   .section__wrapper{
     padding-bottom:30vh;
+    @include media(max-xs){
+      padding-bottom:10vh;
+    }
   }
  
   
@@ -88,8 +89,10 @@ h2{
       &::after{
         transform: rotate(-10deg) scale(1.1);
       }
-      h3{
-        clip-path: inset(0 0 0 0 );
+      @include media(min-sm){
+        h3{
+          clip-path: inset(0 0 0 0 );
+        }
       }
     }
     h3{

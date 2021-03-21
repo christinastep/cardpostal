@@ -8,9 +8,17 @@
   @include media(min-sm){
     border-top: solid 1px var(--mainColor);
     border-bottom: solid 1px var(--mainColor);
-    padding: 2vh 0;
+    padding: 2vh 5vw;
+    
   }
-
+  @include media(max-xs){
+    padding: 0 20px;
+    // &:first-child{
+    //   border-top: solid 1px var(--mainColor);
+    // }
+  
+  }
+ 
 
   .propositonBox{
     position: relative;

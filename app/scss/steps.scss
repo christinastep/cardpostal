@@ -16,9 +16,10 @@
 
   .step__number{
     width:10vw;
+    height:10vw;
     background-color: yellow;
 
-    aspect-ratio: 1;
+    //aspect-ratio: 1;
     border-radius: 50%;
     position: relative;
     @include media(max-xs){

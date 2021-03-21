@@ -5,6 +5,7 @@
     background-color: transparent;
     .section__wrapper{
       width: 100%;
+
     }
   }
   .stemp{
@@ -129,7 +130,7 @@
   margin-top: 50px;
   padding: 0 5vw;
   @include media(max-xs){
-    padding: 0 15px;
+    padding: 0 20px;
   }
 }
 
@@ -138,8 +139,10 @@
 
 .post__content--main{
   width:100%;
- 
   margin-top: 10vh;
+  @include media(max-xs){
+    padding: 0 20px;
+  }
 }
 
 .content__section{

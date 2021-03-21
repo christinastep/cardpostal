@@ -24,12 +24,20 @@
   }
   &--bleu{
     background-color: var(--mainColor);
+    .button{
+      border-color: #fff;
+      color: #fff;
+    }
     p{
       color:#fff
     }
   }
   &--yellow{
     background-color: yellow;
+    .button{
+      border-color: var(--mainColor);
+      color: var(--mainColor);
+    }
     p{
       color:var(--mainColor)
     }
