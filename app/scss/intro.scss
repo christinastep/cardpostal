@@ -165,6 +165,7 @@
  
   img{
     width:45vw;
+    height:29.3vw;
     border: solid 3px var(--mainColor);
     
     @include media(max-xs){

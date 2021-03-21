@@ -23,6 +23,7 @@
     top:0;
     display: block;
     padding-top: 10vh;
+    z-index: 1;
     @include media(max-xs){
       position: relative;
       width:100%;
@@ -39,6 +40,7 @@
     &:before{
       content: "";
       background-color: yellow;
+     
       width:60vw;
       height:60vw;
       display: block;
@@ -56,6 +58,8 @@
   .map__cardBox{
     width:100%;
     display: grid;
+    position: relative;
+    z-index: 2;
     grid-template-columns: 1fr 1fr;
     row-gap: 20px;
     grid-template-rows: 1fr 1fr;
