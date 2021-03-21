@@ -17,11 +17,13 @@
   .step__number{
     width:10vw;
     background-color: yellow;
+
     aspect-ratio: 1;
     border-radius: 50%;
     position: relative;
     @include media(max-xs){
       width: 30vw;
+      height:30vw;
       bottom: -5%;
     }
     p{
@@ -59,7 +61,7 @@
     position: relative;
     top:-5vw;
     width:calc(100% - 5vw);
-    font-family: sans-serif;
+    //font-family: sans-serif;
     left:5vw;
     @include media(max-xs){
       left: 0;
@@ -120,10 +122,11 @@
   padding-right: 2vw;
   margin-bottom: 10vh;
   .headline--big{
-    width: 70%;
+    width: 100%;
     @include media(min-sm){
       margin-left: 30%;
       text-align: right;
+      width: 70%;
     }
   }
 }

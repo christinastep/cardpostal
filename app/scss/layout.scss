@@ -14,7 +14,9 @@ body{
 html{
   width:100vw;
   max-width: 100vw;
-  overflow-x: 0;
+  @include media(max-xs){
+    overflow-x: hidden;
+  }
 }
 
 section{
@@ -34,7 +36,33 @@ section{
     max-width: 1200px;
     padding-right: 2vw;
     padding-left: 2vw;
+    position: relative;
   }
+  &--full{
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+}
+
+.section__wrapper--split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+  @include media(max-xs){
+    display: block;
+  }
+}
+
+.section__wrapper--flex{
+  display: flex;
+
+}
+.wrapper--flex{
+  display: flex;
+  
 }
 :root{
   --mainColor:#1921E0;
@@ -52,4 +80,20 @@ section{
   img{
     height: 100%;
   }
+}
+
+.link--source,
+.link--line{
+  font-size: 16px;
+  display: block;
+  width: 200px;
+  color: var(--mainColor);
+  border-top: solid 2px var(--mainColor);
+  //font-family: sans-serif;
+  margin-top: 20px;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
 }

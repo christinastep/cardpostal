@@ -3,7 +3,8 @@
 
 
 .intro{
-  height:100vh;
+  height: 100vh;
+  //height: calc(var(--vh, 1vh) * 100);
   width:100vw;
   position: relative;
   display: flex;
@@ -12,7 +13,8 @@
   .waveBox{
     position: absolute;
     right:0;
-    bottom:calc(95vh + 6%);
+    bottom: calc(95vh + 6%) ;
+    //bottom: calc((var(--vh, 1vh) * 95)+ 6%);
     @include media(max-xs){
       right:8%;
     }
@@ -27,7 +29,8 @@
 .lineBox{
   position: absolute;
   width:100vw;
-  height:100vh;
+  height: 100vh;
+  //height: calc(var(--vh, 1vh) * 100);
   display: flex;
   justify-content: space-around;
   .line{
@@ -52,9 +55,10 @@
 }
 
 .waveBox{
-  //background-color: orange;
-  height:24vh;
-  top:70vh;
+  height: 24vh;
+  //height: calc(var(--vh, 1vh) * 24);
+  top: 70vh;
+  //top: calc(var(--vh, 1vh) * 70);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -86,11 +90,11 @@
   width:90%;
   max-width: 1200px;
   position: absolute;
-  height:70vh;
+  height: 70vh;
   top:7vh;
   @include media(max-xs){
-    height:56vh;
-    top:15vh;
+    height: 56vh;
+    top: 15vh;
   }
   right:5%;
   .titreBox__word{
@@ -101,14 +105,12 @@
       top:14vh;
       left:20vw;
       @include media(max-xs){
-        top:9vh;
+        top: 9vh;
       }
     }
     &:nth-child(3){
       right: 0;
       bottom:0;
-      //font-size: 150px;
-      //line-height: 165px;
       @include media(max-xs){
         font-size: 75px;
       }
@@ -132,13 +134,13 @@
   
   &--1{
     right:7.5vw;
-    top:8vh;
+    top: 8vh;
     text-align: right;
     animation: moveInTop 1s 0s forwards;
   }
   &--2{
     left:8vw;
-    top:50vh;
+    top: 50vh;
     animation: moveInTop 1s 0.4s forwards;
     @include media(max-xs){
       display: none;
@@ -164,6 +166,7 @@
     
     @include media(max-xs){
       width: 75vw;
+      height:49vw;
       border: solid 2px var(--mainColor);
     }
    
@@ -199,4 +202,6 @@
   transform: scale(0);
   animation:scaleTo100 0.5s 0.3s forwards ;
 }
+
+
 

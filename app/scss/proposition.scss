@@ -1,0 +1,61 @@
+@import "mixin";
+
+.section--propositon{
+  //background-color: var(--mainColor) !important;
+  
+  color:var(--mainColor);
+
+  @include media(min-sm){
+    border-top: solid 1px var(--mainColor);
+    border-bottom: solid 1px var(--mainColor);
+    padding: 2vh 0;
+  }
+
+
+  .propositonBox{
+    position: relative;
+    @include media(max-xs){
+      border-bottom: solid 1px var(--mainColor);
+      padding: 2vh 0;
+    }
+    //overflow: hidden;
+    *{
+      position: relative;
+      z-index: 2;
+    }
+    .propositonBox__img{
+      width:20%;
+      margin-right: 10px;
+      
+      img{
+        width: 100%;
+      }
+    }
+    .propositonBox__headline{
+      color:var(--mainColor);
+    }
+    .propositonBox__link{
+      font-weight: bold;
+    }
+    &::before{
+      width:0vw;
+      height:0vw;
+      background-color: yellow;
+      border-radius: 50%;
+      z-index: 1;
+      content: "";
+      position: absolute;
+      left:10%;
+      top:0%;
+      transition: all 0.3s;
+    }
+    &:hover{
+      &::before{
+        width: 10vw;
+        height: 10vw;
+      }
+    }
+  }
+  
+  
+}
